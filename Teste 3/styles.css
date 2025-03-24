@@ -1,0 +1,90 @@
+/* Reset básico e configuração global */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+/* Cabeçalho */
+header {
+  margin-bottom: 20px;
+}
+
+/* Formulário */
+form {
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  width: 300px;
+}
+
+/* Botões */
+button {
+  padding: 10px 15px;
+  background-color: #008cba;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #005f73;
+}
+
+/* Lista de tarefas */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+/* Itens da lista */
+li {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* Classe para itens criados dinamicamente (usada em addTask) */
+.New-Task {
+  background-color: #e7f7ff;
+}
+
+/* Botão para deletar (se for utilizado) */
+.delete-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 5px 8px;
+  border-radius: 4px;
+}
+
+.delete-btn:hover {
+  background-color: darkred;
+}

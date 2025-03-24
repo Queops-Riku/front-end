@@ -1,0 +1,86 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+main {
+  padding: 20px; /* Adiciona padding ao redor da área principal */
+}
+
+body {
+  font-family: Arial, sans-serif; /* Define a fonte usada no corpo do documento */
+  margin: 0; /* Remove a margem padrão */
+  padding: 0; /* Remove o padding padrão */
+  background-color: #2c2c2c; /* Cor de fundo cinza escuro */
+  color: #f4f4f4; /* Cor do texto clara */
+  text-align: center; /* Centraliza o texto */
+}
+
+nav ul li a:hover {
+  text-decoration: underline; /* Adiciona sublinha aos links quando o mouse passa sobre eles */
+  color: rgb(255, 204, 38);
+}
+
+section {
+  margin: 30px 0; /* Adiciona margem vertical às seções */
+  padding: 25px; /* Adiciona padding ao redor das seções */
+  background-color: #3a3a3a; /* Fundo cinza médio */
+  border-radius: 30px; /* Borda arredondada */
+  box-shadow: 0 0 3px rgb(255, 204, 38); /* Adiciona sombra ao redor das seções */
+}
+
+/* Estilização dos títulos das seções */
+section h2 {
+  margin-top: 0; /* Remove a margem superior dos títulos */
+  color: #5ed7ff; /* Define a cor dos títulos */
+}
+
+/* Estilos para a galeria de imagens */
+.galeria {
+  display: flex; /* Usa flexbox para organizar as imagens */
+  flex-wrap: wrap; /* Permite que as imagens quebrem linha se necessário */
+  justify-content: center; /* Centraliza as imagens */
+  gap: 20px; /* Espaçamento entre as imagens */
+}
+
+.imagem-galeria {
+  width: 215px; /* Largura das imagens */
+  height: auto; /* Mantém a proporção das imagens */
+  border-radius: 30px; /* Borda arredondada para as imagens */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra ao redor das imagens */
+  transition: transform 0.3s; /* Transição suave para efeito de zoom */
+  resize: both;
+}
+
+.imagem-galeria:hover {
+  transform: scale(1.08); /* Efeito de zoom ao passar o mouse */
+}
+
+/* Estilização das categorias horizontais */
+.container {
+  display: flex; /* Usa flexbox para organizar as categorias horizontalmente */
+  justify-content: center; /* Centraliza os itens do menu */
+  flex-wrap: wrap; /* Permite que as categorias quebrem linha se necessário */
+  gap: 20px; /* Espaçamento entre as categorias */
+  margin: 0 auto;
+  resize: both;
+}
+
+.category {
+  background-color: #414141; /* Cor de fundo das categorias */
+  padding: 20px; /* Padding ao redor das categorias */
+  border-radius: 8px; /* Borda arredondada */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra ao redor das categorias */
+  width: 100%; /* Largura das categorias, ajustável conforme necessário */
+}
+
+@theme {
+  /* ... */
+}
+
+@layer components {
+  .container {
+    @apply flex justify-evenly;
+  }
+  .category {
+    @apply bg-[#414141];
+  }
+}
